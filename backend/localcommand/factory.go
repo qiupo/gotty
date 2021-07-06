@@ -3,8 +3,12 @@ package localcommand
 import (
 	"syscall"
 	"time"
+        "strconv"
+	"os"
+	"fmt"
 
 	"github.com/yudai/gotty/server"
+//        "github.com/davecgh/go-spew/spew"
 )
 
 type Options struct {
@@ -17,6 +21,7 @@ type Factory struct {
 	argv    []string
 	options *Options
 	opts    []Option
+        counter int
 }
 
 func NewFactory(command string, argv []string, options *Options) (*Factory, error) {
@@ -30,6 +35,7 @@ func NewFactory(command string, argv []string, options *Options) (*Factory, erro
 		argv:    argv,
 		options: options,
 		opts:    opts,
+                counter: 0,
 	}, nil
 }
 
@@ -44,5 +50,32 @@ func (factory *Factory) New(params map[string][]string) (server.Slave, error) {
 		argv = append(argv, params["arg"]...)
 	}
 
-	return New(factory.command, argv, factory.opts...)
+
+	z := 0
+        for _, narg := range argv {
+            //NS DEBUG log.Printf( "NS-factory> %s", narg)
+            if narg == "%count%" {
+
+	      // NS 16/3 find the next free counter by check if a file by the name /tmp/%d.b64 exists?
+	        icnt := 0 
+	        for icnt = 0; icnt < 4000; icnt++ {
+	            fname := fmt.Sprintf( "/tmp/%d.b64", icnt)
+	            _, err := os.Stat(fname)
+	            if os.IsNotExist(err) {
+	               break
+	            }
+	        }
+                argv[z] = strconv.Itoa( /*factory.counter*/icnt)
+            }
+            z = z + 1
+        }
+
+        // NS DEBUG log.Printf("NS-factory> Running cmd: %s, options: %v", factory.command, factory.opts)
+        // NS DEBUG spew.Dump( argv)
+
+        factory.counter = /*factory.counter*/ 1
+
+	return New(factory.command, argv, factory.counter, factory.opts...)
 }
+
+

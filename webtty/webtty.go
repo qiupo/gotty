@@ -5,6 +5,8 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"sync"
+        "log"
+	"time"
 
 	"github.com/pkg/errors"
 )
@@ -27,7 +29,10 @@ type WebTTY struct {
 
 	bufferSize int
 	writeMutex sync.Mutex
+        lastClick   time.Time
+        maxIdleMinutes int
 }
+
 
 // New creates a new instance of WebTTY.
 // masterConn is a connection to the PTY master,
@@ -43,6 +48,8 @@ func New(masterConn Master, slave Slave, options ...Option) (*WebTTY, error) {
 		rows:        0,
 
 		bufferSize: 1024,
+                lastClick:  time.Now(),
+                maxIdleMinutes: 0,
 	}
 
 	for _, option := range options {
@@ -64,7 +71,31 @@ func (wt *WebTTY) Run(ctx context.Context) error {
 		return errors.Wrapf(err, "failed to send initializing message")
 	}
 
-	errs := make(chan error, 2)
+        errs := make(chan error, 2)
+
+
+        // NS OLD --- setup a ticker every 10 seconds
+        ticker := time.NewTicker( 10000 * time.Millisecond)
+
+        go func() {
+            errs <- func() error {
+                for t := range ticker.C {
+                        tnow := time.Now()
+                        elapsed := tnow.Sub( wt.lastClick)
+                        if( wt.maxIdleMinutes > 0 && elapsed.Minutes() > float64( wt.maxIdleMinutes)) {
+                            wt.handleSlaveReadEvent([]byte("\n\n***** Your connection has been terminated due to inactivity *****\n\n\r\r"))
+                            return errors.Errorf("unknown message type %d", t)
+                        }
+                        // NS log.Println("Elapsed: ", elapsed.Seconds())
+                        // NS log.Println("Max Idle: ", wt.maxIdleMinutes)
+                        // NS log.Println("Tick at", t)
+                }
+                return nil;
+            }()
+        }()
+
+
+
 
 	go func() {
 		errs <- func() error {
@@ -169,6 +200,11 @@ func (wt *WebTTY) handleMasterReadEvent(data []byte) error {
 		if len(data) <= 1 {
 			return nil
 		}
+
+
+                // NS 10/1/19
+                wt.lastClick = time.Now();
+                log.Printf( "Clicked");
 
 		_, err := wt.slave.Write(data[1:])
 		if err != nil {

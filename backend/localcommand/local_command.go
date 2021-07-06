@@ -4,8 +4,10 @@ import (
 	"os"
 	"os/exec"
 	"syscall"
+	"fmt"
 	"time"
 	"unsafe"
+        "log"
 
 	"github.com/kr/pty"
 	"github.com/pkg/errors"
@@ -26,9 +28,10 @@ type LocalCommand struct {
 	cmd       *exec.Cmd
 	pty       *os.File
 	ptyClosed chan struct{}
+        count     int
 }
 
-func New(command string, argv []string, options ...Option) (*LocalCommand, error) {
+func New(command string, argv []string, count_prm int, options ...Option) (*LocalCommand, error) {
 	cmd := exec.Command(command, argv...)
 
 	pty, err := pty.Start(cmd)
@@ -48,6 +51,7 @@ func New(command string, argv []string, options ...Option) (*LocalCommand, error
 		cmd:       cmd,
 		pty:       pty,
 		ptyClosed: ptyClosed,
+		count: 	   count_prm,
 	}
 
 	for _, option := range options {
@@ -60,6 +64,8 @@ func New(command string, argv []string, options ...Option) (*LocalCommand, error
 		defer func() {
 			lcmd.pty.Close()
 			close(lcmd.ptyClosed)
+                        
+			log.Printf("NS-localcmd>end!")
 		}()
 
 		lcmd.cmd.Wait()
@@ -80,6 +86,13 @@ func (lcmd *LocalCommand) Close() error {
 	if lcmd.cmd != nil && lcmd.cmd.Process != nil {
 		lcmd.cmd.Process.Signal(lcmd.closeSignal)
 	}
+
+        // ------- NS run cleanup after closing process
+        cmdstr := fmt.Sprintf( "%s.cleanup", lcmd.command)
+        xmd := exec.Command( cmdstr, lcmd.argv...)
+        pty.Start(xmd)
+        log.Printf( "NS-localcmd> Running cleanup module... lcmd.cmd=%s, command=%s", cmdstr, lcmd.command)
+
 	for {
 		select {
 		case <-lcmd.ptyClosed:

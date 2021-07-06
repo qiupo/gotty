@@ -60,3 +60,11 @@ func WithMasterPreferences(preferences interface{}) Option {
 		return nil
 	}
 }
+
+
+func WithIdleTime(minutes int) Option {
+        return func(wt *WebTTY) error {
+                wt.maxIdleMinutes = minutes
+                return nil
+        }
+}

@@ -8,9 +8,9 @@
 			"Rev": "967539e5e271a2bc9b3dcb1285078a1b1df105ae"
 		},
 		{
-			"ImportPath": "github.com/codegangsta/cli",
-			"Comment": "v1.19.1",
-			"Rev": "0bdeddeeb0f650497d603c4ad7b20cfe685682f6"
+			"ImportPath": "github.com/urfave/cli",
+			"Comment": "v1.22.5",
+			"Rev": "af7fa3de115a4f9772a7758c51f92a1e3b30a010"
 		},
 		{
 			"ImportPath": "github.com/elazarl/go-bindata-assetfs",
