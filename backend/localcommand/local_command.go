@@ -1,15 +1,15 @@
 package localcommand
 
 import (
+	"fmt"
+	"log"
 	"os"
 	"os/exec"
 	"syscall"
-	"fmt"
 	"time"
 	"unsafe"
-        "log"
 
-	"github.com/kr/pty"
+	"github.com/creack/pty"
 	"github.com/pkg/errors"
 )
 

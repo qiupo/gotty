@@ -4,6 +4,8 @@ github.com/NYTimes/gziphandler v0.0.0-20170804200234-967539e5e271/go.mod h1:3wb0
 github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsrgA7czyZG/E6dU=
 github.com/cpuguy83/go-md2man/v2 v2.0.0 h1:EoUDS0afbrsXAZ9YQ9jdu/mZ2sXgT1/2yyNng4PGlyM=
 github.com/cpuguy83/go-md2man/v2 v2.0.0/go.mod h1:maD7wRr/U5Z6m/iR4s+kqSMx2CaBsrgA7czyZG/E6dU=
+github.com/creack/pty v1.1.16 h1:vfetlOf3A+9YKggibynnX9mnFjuSVvkRj+IWpcTSLEQ=
+github.com/creack/pty v1.1.16/go.mod h1:MOBLtS5ELjhRRrroQr9kyvTxUAFNvYEK993ew/Vr4O4=
 github.com/davecgh/go-spew v1.1.0 h1:ZDRjVQ15GmhC3fiQ8ni8+OwkZQO4DARzQgrnXU1Liz8=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/elazarl/go-bindata-assetfs v0.0.0-20150813044622-d5cac425555c h1:Knqh8y6EeTJQ3FZsqdRq7XfB7/RimWQjBtO4YRzUgcE=
@@ -14,8 +16,6 @@ github.com/gorilla/websocket v0.0.0-20150811171432-b6ab76f1fe98 h1:VQR6w4PocLvhb
 github.com/gorilla/websocket v0.0.0-20150811171432-b6ab76f1fe98/go.mod h1:E7qHFY5m1UJ88s3WnNqhKjPHQ0heANvMoAMk2YaljkQ=
 github.com/hashicorp/go-multierror v0.0.0-20150608033521-56912fb08d85 h1:cUIqw6AGGDeIa1KYdG1mLl/bX+WGDbvZJ+dhb2tprxo=
 github.com/hashicorp/go-multierror v0.0.0-20150608033521-56912fb08d85/go.mod h1:JMRHfdO9jKNzS/+BTlxCjKNQHg/jZAft8U7LloJvN7I=
-github.com/kr/pty v0.0.0-20150511174710-5cf931ef8f76 h1:i5TIRQpbCg4aJMUtVHIhkQnSw++Z405Z5pzqHqeNkdU=
-github.com/kr/pty v0.0.0-20150511174710-5cf931ef8f76/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
 github.com/pkg/errors v0.8.1-0.20161029093637-248dadf4e906 h1:BKfCEBHnHoXswNe0Btj/zOfiyn40z6qOti8SeLbQgdM=
 github.com/pkg/errors v0.8.1-0.20161029093637-248dadf4e906/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

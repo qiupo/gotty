@@ -4,6 +4,9 @@ github.com/NYTimes/gziphandler
 # github.com/cpuguy83/go-md2man/v2 v2.0.0
 ## explicit
 github.com/cpuguy83/go-md2man/v2/md2man
+# github.com/creack/pty v1.1.16
+## explicit
+github.com/creack/pty
 # github.com/elazarl/go-bindata-assetfs v0.0.0-20150813044622-d5cac425555c
 ## explicit
 github.com/elazarl/go-bindata-assetfs
@@ -16,9 +19,6 @@ github.com/gorilla/websocket
 # github.com/hashicorp/go-multierror v0.0.0-20150608033521-56912fb08d85
 ## explicit
 github.com/hashicorp/go-multierror
-# github.com/kr/pty v0.0.0-20150511174710-5cf931ef8f76
-## explicit
-github.com/kr/pty
 # github.com/pkg/errors v0.8.1-0.20161029093637-248dadf4e906
 ## explicit
 github.com/pkg/errors
