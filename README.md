@@ -33,6 +33,10 @@ If you have a Go language environment, you can install GoTTY with the `go get` c
 ```sh
 $ go get github.com/yudai/gotty
 ```
+Run this command to use this repository
+```sh
+$ go get github.com/qiupo/gotty
+```
 
 # Usage
 
