@@ -14,25 +14,25 @@
       <change beforePath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/gzip.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/gzip.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/gzip_go18.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/NYTimes/gziphandler/gzip_go18.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/app.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/appveyor.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/category.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/cli.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/command.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/context.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/flag-types.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/flag.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/flag_generated.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/funcs.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/generate-flag-types" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/help.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/codegangsta/cli/runtests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/app.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/appveyor.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/category.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/cli.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/command.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/context.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/errors.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/flag-types.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/flag.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/flag_generated.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/funcs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/generate-flag-types" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/help.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/urfave/cli/runtests" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/LICENSE.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/md2man/md2man.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/md2man/md2man.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/md2man/roff.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/cpuguy83/go-md2man/v2/md2man/roff.go" afterDir="false" />
